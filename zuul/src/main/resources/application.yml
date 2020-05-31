@@ -1,0 +1,20 @@
+server:
+  port: 7001
+spring:  application:    name: zuul-service
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/
+zuul:
+ ignoredServices: '*'
+ routes:
+  pruduct:
+   path: /pruduct/**
+   serviceId: aigou-product-service
+  common:
+   path: /common/**
+   serviceId: aigou-common-service prefix: /aigou
+    
+      

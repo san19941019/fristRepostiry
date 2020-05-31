@@ -1,0 +1,9 @@
+server:
+  port: 8088
+spring:  application:    name: aigou-common-service
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/
